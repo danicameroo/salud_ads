@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Kaisei+Tokumin&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Candal&display=swap');
+
+@media (min-width: 701px) {
+    .containerGymHomeMob{
+        display: none;
+    }
+    .gymHome{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: #D7F6AB;
+        margin-top: 7%;
+    }
+    .titleGymHome{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: "Candal", sans-serif;
+        font-size: 48px;
+        color: #374C08;
+        margin: 0;
+        padding-top: 3%;
+    }
+    .textGymHome{
+        font-family: "Kaisei Tokumin", serif;
+        font-size: 24px;
+        color: #141D00;
+        width: 70%;
+        text-align: center;
+        padding-bottom: 2%;
+    }
+    .containerGymHome{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        width: 80%;
+    }
+    .imgGymHome{
+        width: 257px;
+        height: 257px;
+        object-fit: cover;
+        margin-bottom: 0;
+    }
+    .catContGymHome{
+        width: 155px;
+        height: 32px;
+        background-color: #374C08;
+        margin-top: 5px;
+    }
+    .catTextGymHome{
+        font-family: "Kaisei Tokumin", serif;
+        font-size: 18px;
+        color: #EDFFD2;
+        padding-left: 5%;
+        margin-top: 5px;
+    }
+    .textContGymHome{
+        font-family: "Kaisei Tokumin", serif;
+        font-size: 20px;
+        color: #141D00;
+        width: 80%;
+        margin-top: 5px;
+    }
+    .botonGymHome{
+        background-color: #374C08;
+        height: 50px;
+        width: 231px;
+        border: none;
+        border-radius: 5px;
+        color: #EDFFD2;
+        font-family: "Kaisei Tokumin", serif;
+        font-size: 20px;
+        padding: 0;
+        margin-bottom: 5%;
+        margin-top: 2%;
+    }
+}

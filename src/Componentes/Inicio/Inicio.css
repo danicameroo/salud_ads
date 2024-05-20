@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Kaisei+Tokumin&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Candal&display=swap');
+
+@media (min-width: 701px) {
+    .InicioMob{
+        display: none;
+    }
+    .inicio{
+        display: flex;
+        flex-direction: row;
+        gap: 2%;
+        justify-content: center;
+        align-items: center;
+        margin-top: 5%;
+    }
+    .containerInicio{
+        display: flex;
+        flex-direction: column;
+    }
+    .imgInicio{
+        width: 397px;
+        height: 313px;
+        object-fit: cover;
+    }
+    .containerTextInicio{
+        background-color: white;
+        height: 159px;
+        width: 397px;
+    }
+    .catContInicio{
+        width: 112px;
+        height: 32px;
+        background-color: #D7F6AB;
+        margin-left: 5%;
+    }
+    .catTextInicio{
+        font-family: "Kaisei Tokumin", serif;
+        font-size: 18px;
+        color: #243302;
+        padding-left: 5%;
+    }
+    .textInicio{
+        font-family: "Kaisei Tokumin", serif;
+        font-size: 20px;
+        color: #141D00;
+        padding-left: 5%;
+        width: 80%;
+    }
+}
