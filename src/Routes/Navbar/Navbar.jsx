@@ -2,6 +2,7 @@ import { useState } from 'react'
 import menuOpen from '../../img/menuOpen.svg'
 import './Navbar.css'
 import './NavbarMob.css'
+import { Link } from 'react-router-dom'
 
 const Navbar = () => {
     const [menu, setMenu] = useState(false)
@@ -18,15 +19,15 @@ const Navbar = () => {
         <>
             <div className='Navbar'>
                 <div className='containersNav'>
-                    <h1 className='titleNav'>TITULO</h1>
+                    <Link className='links' to="/"><h1 className='titleNav'>TITULO</h1></Link>
                 </div>
                 <div className='containersNav'>
                     <ul className='listNav'>
-                        <li className='textListNav'>Gym</li>
-                        <li className='textListNav'>Salud</li>
-                        <li className='textListNav'>Nutrición</li>
-                        <li className='textListNav'>Comunidad</li>
-                        <li className='textListNav'>Calculadora IMC</li>
+                        <Link className='links' to="/"><li className='textListNav'>Home</li></Link>
+                        <Link className='links' to="/categoria/entrenamiento"><li className='textListNav'>Entrenamiento</li></Link>
+                        <Link className='links' to="/categoria/bienestar"><li className='textListNav'>Bienestar</li></Link>
+                        <Link className='links' to="/categoria/nutricion"><li className='textListNav'>Nutrición</li></Link>
+                        <Link className='links' to="/calculadoraIMC"><li className='textListNav'>Calculadora IMC</li></Link>
                     </ul>
                 </div>
             </div>
@@ -36,16 +37,16 @@ const Navbar = () => {
                 {menu === true ?
                     <div className='containersNavMob'>
                         <ul className='listNav'>
-                            <li className='textListNav'>Gym</li>
-                            <li className='textListNav'>Salud</li>
-                            <li className='textListNav'>Nutrición</li>
-                            <li className='textListNav'>Comunidad</li>
-                            <li className='textListNav'>Calculadora IMC</li>
+                            <Link className='links' to="/"><li onClick={() => setMenu(false)} className='textListNav'>Home</li></Link>
+                            <Link className='links' to="/categoria/entrenamiento"><li onClick={() => setMenu(false)} className='textListNav'>Entrenamiento</li></Link>
+                            <Link className='links' to="/categoria/bienestar"><li onClick={() => setMenu(false)} className='textListNav'>Bienestar</li></Link>
+                            <Link className='links' to="/categoria/nutricion"><li onClick={() => setMenu(false)} className='textListNav'>Nutrición</li></Link>
+                            <Link className='links' to="/calculadoraIMC"><li onClick={() => setMenu(false)} className='textListNav'>Calculadora IMC</li></Link>
                         </ul>
-                    </div> : <></>
+                    </div>: <></>
                 }
                 </div>
-                <h1 className='titleNavMob'>TITULO</h1>
+                <Link className='links' to="/"><h1 className='titleNavMob'>TITULO</h1></Link>
             </div>
         </>
     )

@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Kaisei+Tokumin&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Candal&display=swap');
+
 
 @media (min-width: 701px) {
     .InicioMob{
@@ -28,9 +27,9 @@
         width: 397px;
     }
     .catContInicio{
-        width: 112px;
+        width: 152px;
         height: 32px;
-        background-color: #D7F6AB;
+        background-color: #CFE1BB;
         margin-left: 5%;
     }
     .catTextInicio{

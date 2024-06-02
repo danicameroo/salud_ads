@@ -1,99 +1,114 @@
-import pesas from './img/pesas.jpg'
-import pesasDos from './img/pesasDos.jpg'
-import saludg from './img/salud.jpg'
-import perdida from './img/perdida.jpg'
+import ArtIdTresIMG from './img/ArtIdTres.webp'
+import ArtIdCuatroIMG from './img/ArtIdCuatro.webp'
+import ArtIdCincoIMG from './img/ArtIdCinco.jpg'
+import ArtIdSeisIMG from './img/ArtIdSeis.webp'
+import ArtIdSieteIMG from './img/ArtIdSiete.webp'
+import ArtIdOchoIMG from './img/ArtIdOcho.webp'
+import ArtIdNueveIMG from './img/ArtIdNueve.webp'
+import ArtIdDiezIMG from './img/ArtIdDiez.webp'
+import ArtIdDoceIMG from './img/ArtIdDoce.webp'
+import ArtIdTreceIMG from './img/ArtIdTrece.webp'
+import ArtIdCatorceIMG from './img/ArtIdCatorce.webp'
+import ArtIdQuinceIMG from './img/ArtIdQuince.webp'
+import ArtIdDiesiseisIMG from './img/ArtIdDiesiseis.webp'
+import ArtIdDiecinueveIMG from './img/ArtIdDiecinueve.webp'
 
-import descanso from './img/descanso.png'
-import meditacion from './img/meditacion.jpg'
-import habitos from './img/habitos.jpg'
-
-import receta1 from './img/receta1.png'
-import receta2 from './img/receta2.jpg'
-import receta3 from './img/receta3.png'
-import receta4 from './img/receta4.jpg'
-
-import gymInicio from './img/gymInicio.jpeg'
-import nutricionInicio from './img/nutricionInicio.jpg'
-import saludInicio from './img/saludInicio.jpg'
 
 export const gym = [
     {
-        img: pesas,
-        title: "Lorem ipsum dolor sit amet consectetur adip",
-        cat: "Pesas"
+        img: ArtIdCuatroIMG,
+        id: "Que-ejercicios-hacer-para-perder-grasa",
+        title: "¿Que ejercicios hacer para perder grasa?",
+        cat: "Entrenamiento"
     },
     {
-        img: pesasDos,
-        title: "Lorem ipsum dolor sit amet consectetur adip",
-        cat: "Pesas"
+        img: ArtIdSeisIMG,
+        id: "Como-evitar-el-estancamiento-en-la-perdida-de-peso",
+        title: "¿Como evitar el estancamiento en la perdida de peso?",
+        cat: "Entrenamiento"
     },
     {
-        img: perdida,
-        title: "Lorem ipsum dolor sit amet consectetur adip",
-        cat: "Perdida de peso"
+        img: ArtIdOchoIMG,
+        id: "Por-que-es-importante-el-deporte-en-el-desarrollo-de-los-ninos",
+        title: "¿Por qué  es importante el deporte en el desarrollo de los niños?",
+        cat: "Entrenamiento"
     },
     {
-        img: saludg,
-        title: "Lorem ipsum dolor sit amet consectetur adip",
-        cat: "Salud"
+        img: ArtIdTresIMG,
+        id: "Tips-para-aumentar-masa-muscular",
+        title: "Tips para aumentar masa muscular",
+        cat: "Entrenamiento"
     }
 ]
 
 export const salud = [
     {
-        img: descanso,
-        title: "Lorem ipsum dolor sit amet consectetur adip",
-        cat: "Descanso"
+        img: ArtIdSieteIMG,
+        id: "Los-principales-beneficios-de-la-practica-del-yoga",
+        title: "Los principales beneficios de la práctica del yoga",
+        cat: "Bienestar",
+        idn: 1
     },
     {
-        img: meditacion,
-        title: "Lorem ipsum dolor sit amet consectetur adip",
-        cat: "Meditacion"
+        img: ArtIdNueveIMG,
+        id: "Ejercicios-recomendados-y-contraindicados-para-mujeres-embarazadas",
+        title: "Ejercicios recomendados y contraindicados para mujeres embarazadas",
+        cat: "Bienestar",
+        idn: 2
     },
     {
-        img: habitos,
-        title: "Lorem ipsum dolor sit amet consectetur adip",
-        cat: "Habitos"
+        img: ArtIdDiezIMG,
+        id: "Como-el-ejercicio-fortalece-el-sistema-inmunologico",
+        title: "Cómo el ejercicio fortalece el sistema inmunológico",
+        cat: "Bienestar",
+        idn: 3
     }
 ]
 
 export const nutricion = [
     {
-        img: receta1,
-        title: "Lorem ipsum dolor sit amet consectetur adip",
-        cat: "Cena"
+        img: ArtIdCatorceIMG,
+        id: "5-ideas-de-desayuno-altas-en-proteina",
+        title: "5 ideas de desayuno altas en proteína",
+        cat: "Nutricion"
     },
     {
-        img: receta2,
-        title: "Lorem ipsum dolor sit amet consectetur adip",
-        cat: "Vegano"
+        img: ArtIdQuinceIMG,
+        id: "Alimentos-ricos-en-proteinas",
+        title: "Alimentos ricos en proteínas",
+        cat: "Nutricion"
     },
     {
-        img: receta3,
-        title: "Lorem ipsum dolor sit amet consectetur adip",
-        cat: "Almuerzo"
+        img: ArtIdDiesiseisIMG,
+        id: "4-ideas-de-postres-saludable",
+        title: "4 ideas de postres saludables",
+        cat: "Nutricion"
     },
     {
-        img: receta4,
-        title: "Lorem ipsum dolor sit amet consectetur adip",
-        cat: "Desayuno"
+        img: ArtIdTreceIMG,
+        id: "Como-aumentar-la-hemoglobina",
+        title: "¿Cómo aumentar la hemoglobina?",
+        cat: "Nutricion"
     }
 ]
 
 export const inicio = [
     {
-        img: gymInicio,
-        title: "Lorem ipsum dolor sit amet consectetur adip",
-        cat: "Gym"
+        img: ArtIdCincoIMG,
+        id: "Es-bueno-hacer-ejercicio-en-ayunas",
+        title: "¿Es bueno hacer ejercicio en ayunas?",
+        cat: "Entrenamiento"
     },
     {
-        img: nutricionInicio,
-        title: "Lorem ipsum dolor sit amet consectetur adip",
+        img: ArtIdDoceIMG,
+        id: "Cuanta-agua-deberia-beber-cada-dia",
+        title: "¿Cuánta agua debería beber cada día?",
+        cat: "Bienestar"
+    },
+    {
+        img: ArtIdDiecinueveIMG,
+        id: "4-ideas-de-almuerzos-altos-en-proteinas",
+        title: "4 ideas de almuerzos altos en proteínas",
         cat: "Nutricion"
-    },
-    {
-        img: saludInicio,
-        title: "Lorem ipsum dolor sit amet consectetur adip",
-        cat: "Salud"
     }
 ]

@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Kaisei+Tokumin&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Candal&display=swap');
+
 
 @media (max-width: 700px) {
     .containerGymHome{
@@ -10,7 +9,7 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        background-color: #D7F6AB;
+        background-color: #CFE1BB;
         margin-top: 7%;
     }
     .titleGymHome{

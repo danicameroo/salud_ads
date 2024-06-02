@@ -1,0 +1,90 @@
+
+@media (min-width: 701px) {
+    .containerDosNutricionHomeMob{
+        display: none;
+    }
+    .NutricionHome{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .containerUnoNutricionHome{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+    .imgNutricionHome{
+        width: 490px;
+        height: 530px;
+        border-radius: 10px 0 0 10px ;
+        object-fit: cover;
+    }
+    .contUnoNutricionHome{
+        background-color: #CFE1BB;
+        width: 47%;
+        height: 530px;
+        border-radius: 0 10px 10px 0;
+    }
+    .titleNutricionHome{
+        display: flex;
+        justify-content: start;
+        align-items: start;
+        font-family: "Candal", sans-serif;
+        font-size: 48px;
+        color: #374C08;
+        margin: 0;
+        padding-top: 5%;
+        padding-left: 10%;
+    }
+    .textNutricionHome{
+        font-family: "Kaisei Tokumin", serif;
+        font-size: 28px;
+        color: #141D00;
+        width: 80%;
+        text-align: start;
+        padding-bottom: 2%;
+        padding-left: 10%;
+    }
+    .botonNutricionHome{
+        background-color: #374C08;
+        height: 50px;
+        width: 231px;
+        border: none;
+        border-radius: 5px;
+        color: #EDFFD2;
+        font-family: "Kaisei Tokumin", serif;
+        font-size: 20px;
+        padding: 0;
+        margin-bottom: 5%;
+        margin-top: 2%;
+        margin-left: 10%;
+        cursor: pointer;
+    }
+    .containerDosNutricionHome{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 5%;
+        margin-top: 2%;
+    }
+    .imgMapNutricionHome{
+        width: 272px;
+        height: 272px;
+        object-fit: cover;
+    }
+    .textMapNutricionHome{
+        font-family: "Kaisei Tokumin", serif;
+        font-size: 20px;
+        color: #141D00;
+        margin-top: 5px; 
+        width: 90%;   
+    }
+    .contDosNutricionHome{
+        display: flex;
+        flex-direction: column;
+        width: 35%;
+    }
+}

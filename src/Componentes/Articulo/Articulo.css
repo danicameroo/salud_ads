@@ -1,0 +1,100 @@
+
+@media (min-width: 701px) {
+    .Articulo{
+        width: 70%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        margin: auto;
+    
+    }
+    .containerUnoArt{
+        width: 30%;
+        align-self: flex-start;
+        position: sticky;
+        top: 0;
+        transition: top .3s;
+        padding-left: 3%;
+        margin-top: 3%;
+    }
+    .lineArt{
+        content: "";
+        background-color: #374C08;
+        height: 2px;
+        width: 80%;
+        margin-top: 10%;
+        margin-bottom: 0;
+    }
+    .compartirTextArt{
+        font-family: "Kaisei Tokumin", serif;
+        font-size: 20px;
+        color: #141D00; 
+        margin-top: 3%;
+        margin-bottom: 2%;  
+    }
+    .compartirTextArtMob{
+        display: none;
+    }
+    .compartirContIconsArt{
+        display: flex;
+        flex-direction: row;
+        gap: 3%;
+        margin-top: 2%;
+    }
+    .containerDosArt{
+        display: flex;
+        flex-direction: column;
+        width: 75%;
+        padding-left: 5%;
+    }
+    .titleContArt{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        margin-top: 5%;
+    }
+    .containerTitleArt{
+        background-color: #CFE1BB;
+        height: 490px;
+        border-radius: 5px 0 0 5px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 730px;
+    }
+    .titleArt{
+        font-family: "Candal", sans-serif;
+        font-size: 52px;
+        color: #374C08;
+        margin: 0;
+        width: 70%;
+    }
+    .imgArt{
+        object-fit: cover;
+        width: 490px;
+        height: 490px;
+        border-radius: 0 5px 5px 0;
+    }
+    .textContArt{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        margin-top: 5%;
+    }
+    .subtitleArt{
+        font-family: "Candal", sans-serif;
+        font-size: 48px;
+        color: #374C08;
+        margin: 0;
+    }
+    .textArt{
+        font-family: "Kaisei Tokumin", serif;
+        font-size: 24px;
+        color: #141D00;
+        margin-top: 15px;
+        padding-bottom: 10px;
+        width: 90%;
+    }
+}

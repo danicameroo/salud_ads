@@ -1,0 +1,83 @@
+
+
+@media (max-width: 700px) {
+    .saludHome{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .titleSaludHome{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: "Candal", sans-serif;
+        font-size: 32px;
+        color: #374C08;
+        margin: 0;
+        padding-top: 3%;
+    }
+    .containerSaludHome{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: start;
+        gap: 2%;
+        margin-top: 5%;
+    }
+    .imgSaludHome{
+        width: 150px;
+        height: 160px;
+        object-fit: cover;
+    }
+    .cont{
+        order: -1;
+        margin: auto 10%;
+    }
+    .contTwo{
+        width: 40%;
+    }
+    
+    .contTwoEspacio{
+        width: 40%;
+    }
+    .imgSaludHomeTwo{
+        width: 300px;
+        height: 180px;
+        object-fit: cover;
+    }
+    .catContSaludHome{
+        width: 125px;
+        height: 25px;
+        background-color: #374C08;
+        margin-top: 5px;
+    }
+    .catTextContSaludHome{
+        font-family: "Kaisei Tokumin", serif;
+        font-size: 15px;
+        color: #EDFFD2;
+        padding-left: 5%;
+        margin-top: 5px;
+    }
+    .textSaludHome{
+        font-family: "Kaisei Tokumin", serif;
+        font-size: 16px;
+        color: #141D00;
+        width: 80%;
+        margin-top: 5px;
+    }
+    .botonSaludHome{
+        background-color: #374C08;
+        height: 38px;
+        width: 150px;
+        border: none;
+        border-radius: 5px;
+        color: #EDFFD2;
+        font-family: "Kaisei Tokumin", serif;
+        font-size: 18px;
+        padding: 0;
+        margin-bottom: 5%;
+        margin-top: 2%;
+    }
+}

@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Kaisei+Tokumin&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Candal&display=swap');
+
 
 @media (min-width: 701px) {
     .containerGymHomeMob{
@@ -10,8 +9,9 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        background-color: #D7F6AB;
+        background-color: #CFE1BB;
         margin-top: 7%;
+        padding-bottom: 5%;
     }
     .titleGymHome{
         display: flex;
@@ -38,6 +38,9 @@
         align-items: center;
         width: 80%;
     }
+    .mapContGymHome{
+        width: 350px;
+    }
     .imgGymHome{
         width: 257px;
         height: 257px;
@@ -61,7 +64,7 @@
         font-family: "Kaisei Tokumin", serif;
         font-size: 20px;
         color: #141D00;
-        width: 80%;
+        width: 70%;
         margin-top: 5px;
     }
     .botonGymHome{
@@ -76,5 +79,6 @@
         padding: 0;
         margin-bottom: 5%;
         margin-top: 2%;
+        cursor: pointer;
     }
 }
