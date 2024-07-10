@@ -1,11 +1,12 @@
 import { Link, useLocation } from "react-router-dom";
 import { datacategories } from "../../datacategories"
-import NavbarTwo from "../../Routes/NavbarTwo/NavbaTwo";
-import './Categorias.css'
-import './CategoriasMob.css'
+import '../../estilos.css'
 import flecha from '../../img/flechaSelect.svg'
-import { useEffect, useState } from "react";
+import {useEffect, useState } from "react";
 import { Helmet } from "react-helmet";
+import NavbarTwoLap from "../../Routes/NavbarTwo/NavbarTwoLap/NavbarTwoLap";
+import NavbarTwoMob from "../../Routes/NavbarTwo/NavbarTwoMob/NavbarTwoMob";
+import { useMediaQuery } from "react-responsive";
 
 const Categorias = () => {
     const location = useLocation();
@@ -15,7 +16,8 @@ const Categorias = () => {
     const [isOpen, setIsOpen] = useState(false);
     const [categorie, setCategorie] = useState(cat);
     const [filtro, setFiltro] = useState([]);
-    const [desc, setDesc] = useState([]);
+    const [desc, setDesc] = useState('');
+    const isMobile = useMediaQuery({ maxWidth: 700 });
 
     const handleClick = (value) => {
         const res = datacategories.filter(category =>
@@ -45,7 +47,6 @@ const Categorias = () => {
         setIsOpen(!isOpen);
     };
 
-
     useEffect(() => {
         if(cat === 'entrenamiento'){
             setCategorie('Entrenamiento')
@@ -59,7 +60,6 @@ const Categorias = () => {
             setCategorie('Nutrición')
             setFiltro(['Altos en proteínas', 'Salud', 'Baja en calorias'])
             setDesc('Descubre una alimentación nutritiva y balanceada con recetas saludables, guías sobre macronutrientes y micronutrientes, y consejos para una dieta equilibrada. ¡Todo lo que necesitas para mejorar tu salud a través de una nutrición adecuada!')
-
         }
     }, [cat])
     
@@ -67,9 +67,11 @@ const Categorias = () => {
     return(
         <>
             <Helmet>
+                <title>{categorie} | Fitknow</title>
                 <meta name="description" content={desc} />
+                <link rel="canonical" href={`https://www.fitknow.fit/`} />    
             </Helmet>
-            <NavbarTwo />
+            {isMobile ? <NavbarTwoMob />: <NavbarTwoLap /> }
             <div className="categorias">
                 <div className="containerUnoCat">
                     <div className="contTitleCat">
@@ -94,13 +96,15 @@ const Categorias = () => {
                 </div>
                 <div className="containerDosCat">
                 {subcat.map((info) => (
-                    <Link className="links" to={`/articulo/${info.id}`}><div className="contInfoCat">
-                        <img className="imgCatInfo" src={info.img} alt={info.title} />
+                    <Link to={`/${info.id}`} className="links">
+                    <div className="contInfoCat">
+                        <img className="imgCatInfo" src={info.img} alt={info.alt} />
                         <div className="contTextInfoCat">
                             <div className="contSubCat"><p className="textSubCat">{categorie}</p></div>
                             <p className="textInfoCat">{info.title}</p>
                         </div>
-                    </div></Link>
+                    </div>
+                    </Link>
                 ))}
                 </div>
             </div>  

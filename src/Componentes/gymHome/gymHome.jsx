@@ -1,48 +1,54 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { gym } from "../../data"
-import { Carousel } from 'react-responsive-carousel';
-import 'react-responsive-carousel/lib/styles/carousel.min.css';
-import './gymHome.css'
-import './gymHomeMob.css'
+import '../../estilos.css'
 import { Link } from "react-router-dom";
 
 const GymHome = () => {
     const [currentSlide, setCurrentSlide] = useState(0);
 
+    useEffect(() => {
+        const containerGymHome = document.querySelector('.containerGymHome');
+        const dots = document.querySelectorAll('.dots');
+
+        const handleScroll = () => {
+            let currentIndex = Math.floor(containerGymHome.scrollLeft / containerGymHome.offsetWidth);
+            setCurrentSlide(currentIndex);
+
+            dots.forEach((dot, index) => {
+                if (index === currentIndex) {
+                    dot.classList.add('active');
+                } else {
+                    dot.classList.remove('active');
+                }
+            });
+        };
+
+        containerGymHome.addEventListener('scroll', handleScroll);
+
+        return () => {
+            containerGymHome.removeEventListener('scroll', handleScroll);
+        };
+    }, []);
+
     return(
         <>
             <div className="containerGymHome">
-                {gym.map((item) => (
-                    <div className="mapContGymHome">
-                    <Link className="links" to={`/articulo/${item.id}`}>
-                        <img className="imgGymHome" src={item.img} alt={item.title} />
-                        <div className="catContGymHome"><p className="catTextGymHome">{item.cat}</p></div>
-                        <p className="textContGymHome">{item.title}</p>
-                    </Link>
-                    </div>
+                {gym.map((item, index) => (
+                    <a className="links" href={`https://www.fitknow.fit/${item.id}`}>
+                        <div className="mapContGymHome">
+                            <img className="imgGymHome" src={item.img} alt={item.alt} />
+                            <div className="catContGymHome"><p className="catTextGymHome">{item.cat}</p></div>
+                            <p className="textContGymHome">{item.title}</p>
+                        </div>
+                    </a>
                 ))}
             </div>
-            <div className="containerGymHomeMob">
-                <Carousel
-                showThumbs={false}
-                showStatus={false}
-                infiniteLoop
-                selectedItem={currentSlide}
-                onChange={setCurrentSlide}
-                showArrows={false}>
-                 {gym.map((item) => (
-                    <div className="mapContGymHomeMob">
-                    <Link className="links" to={`/articulo/${item.id}`}>
-                        <img className="imgGymHomeMob" src={item.img} alt={item.title} />
-                        <div className="catContGymHomeMob"><p className="catTextGymHomeMob">{item.cat}</p></div>
-                        <p className="textContGymHomeMob">{item.title}</p>
-                    </Link>
-                    </div>
+            <div className="containerDots">
+                {gym.map((_, index) => (
+                    <div key={index} className={`dots ${index === currentSlide ? 'active' : ''}`}></div>
                 ))}
-                </Carousel>
             </div>
-        </>
-            
+         </>
     )
 }
 

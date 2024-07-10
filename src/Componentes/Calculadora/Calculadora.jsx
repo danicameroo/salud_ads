@@ -1,8 +1,11 @@
-import { useState } from "react"
-import NavbarTwo from "../../Routes/NavbarTwo/NavbaTwo"
-import './Calculadora.css'
-import './CalculadoraMob.css'
+import { useEffect, useState } from "react"
 import { Helmet } from "react-helmet"
+import bascula1 from '../../img/bascula1.jpg'
+import bascula2 from '../../img/bascula2.webp'
+import bascula3 from '../../img/bascula3.jpg'
+import NavbarTwoLap from "../../Routes/NavbarTwo/NavbarTwoLap/NavbarTwoLap"
+import NavbarTwoMob from "../../Routes/NavbarTwo/NavbarTwoMob/NavbarTwoMob"
+import { useMediaQuery } from "react-responsive"
 
 const Calculadora = () => {
     const [edad, setEdad] = useState('')
@@ -13,6 +16,7 @@ const Calculadora = () => {
     const [cal, setCal] = useState(false)
     const [isCalculating, setIsCalculating] = useState(false);
     const [error, setError] = useState(false);
+    const isMobile = useMediaQuery({ maxWidth: 700 });
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -54,11 +58,21 @@ const Calculadora = () => {
     return(
         <>
         <Helmet>
-        <meta name="description" content="Calcula tu Índice de Masa Corporal (IMC) de manera rápida y sencilla. Obtén resultados personalizados y aprende a interpretar tus datos para mejorar tu salud y bienestar." />
+            <title>Calculadora de indice de masa corporal (IMC)</title>
+            <meta name="description" content='Calcula tu Índice de Masa Corporal (IMC) de manera rápida y sencilla. Obtén resultados personalizados y aprende a interpretar tus datos para mejorar tu salud y bienestar.' />
+            <link rel="canonical" href='https://www.fitknow.fit/calculadoraIMC' />
         </Helmet>
-        <NavbarTwo />
+        {isMobile ? <NavbarTwoMob /> : <NavbarTwoLap />}
         <div className="Calculadora">
             <h1 className="tituloCalculadora">Calculadora de indice de masa corporal (IMC)</h1>
+            <div className="infoIMCcalculadora">
+                <p className="textArt" style={{ textIndent: '2em', textAlign: 'center', width: '100%'}}>La calculadora de Índice de Masa Corporal (IMC) es una herramienta sencilla pero muy útil para evaluar de manera aproximada el estado de salud y composición corporal de una persona. El IMC se calcula a partir de la relación entre el peso y la estatura de un individuo, y proporciona una medida estandarizada que permite clasificar si la persona se encuentra en un rango saludable, con sobrepeso u obesidad.</p>
+                <p className="textArt" style={{ textIndent: '2em', textAlign: 'center', width: '100%'}}>Esta calculadora es ampliamente utilizada por profesionales de la salud, nutricionistas y personal médico, ya que el IMC es uno de los indicadores más comúnmente empleados para determinar si una persona presenta un peso adecuado para su altura. Más allá de ser un simple número, el IMC puede ser un reflejo del riesgo que conlleva tener un peso corporal fuera del rango saludable, ya que tanto el sobrepeso como la obesidad se han asociado con diversas afecciones como enfermedades cardiovasculares, diabetes, hipertensión y algunos tipos de cáncer, entre otras.</p>
+                <p className="textArt" style={{ textIndent: '2em', textAlign: 'center', width: '100%'}}>Conocer el propio IMC puede ser muy valioso para las personas, ya que les permite tener una idea general de su estado de salud y, si fuera necesario, tomar medidas para mejorar su composición corporal a través de cambios en hábitos alimenticios y de actividad física. Además, esta información puede ser útil para el seguimiento y monitoreo de programas de pérdida de peso o de mejora de la condición física.</p>
+            </div>
+
+
+
                 <form className="formCalculadora" onSubmit={handleSubmit}>
                     <p className="textInputsCalculadora">Altura (cm) ej: 180</p>
                     <input className="inputCalculadora" onChange={(e) => setAltura(parseFloat(e.target.value))} type="number" required/>
@@ -135,6 +149,27 @@ const Calculadora = () => {
                         <p className="textInfoCirCalculadora">Si el IMC está por encima de 30, podemos hablar de obesidad.</p>
                     </div>
                 </div>
+            </div>
+        </div>
+        <div className="containerInfoCalculadora"  style={{width: '80%', margin: 'auto'}} >
+            <h2 className="textInfoCalculadoraAmazon">Compra una bascula para peso corporal inteligente</h2>
+            <p className="textArt" style={{ textIndent: '2em', textAlign: 'center', marginTop: '2em', width: '100%'}}>Adquirir una báscula que incorpore una calculadora de Índice de Masa Corporal (IMC) puede ser una opción sumamente práctica y beneficiosa para quienes buscan monitorear de manera integral su salud y bienestar físico. Esta solución combina dos herramientas fundamentales en un solo dispositivo, lo que ofrece una serie de ventajas significativas.</p>
+            <p className="textArt" style={{ textIndent: '2em', textAlign: 'center'}}>En primer lugar, tener una báscula con calculadora de IMC integrada facilita enormemente el proceso de seguimiento de la composición corporal. Al poder medir el peso y calcular el IMC de forma simultánea, se simplifica el proceso de recopilación de datos y se reduce la probabilidad de errores o inconsistencias en los registros. Esta eficiencia en la recolección de información es clave para quienes se encuentran inmersos en programas de control de peso, rutinas de ejercicio o simplemente desean mantener un estilo de vida saludable.</p>
+            <p className="textArt" style={{ textIndent: '2em', textAlign: 'center'}}>Además, la integración de la calculadora de IMC en la báscula permite una evaluación más completa del estado de salud. Al contar con ambas métricas (peso y IMC) a la mano, las personas pueden obtener una imagen más clara y detallada de su composición corporal, lo que les brinda una valiosa retroalimentación para tomar decisiones informadas sobre sus objetivos de salud y bienestar.</p>
+            <p className="textArt" style={{ textIndent: '2em', textAlign: 'center'}}>Por otra parte, la conveniencia de tener una sola unidad que combine la báscula y la calculadora de IMC representa una ventaja práctica notable. En lugar de tener que utilizar dos dispositivos por separado, los usuarios pueden simplificar su rutina de seguimiento y monitoreo, ahorrando tiempo y esfuerzo. Esto resulta especialmente útil en entornos como hogares, consultorios médicos o centros de fitness, donde la accesibilidad y la facilidad de uso son factores clave.</p>
+            <div className="containerAmazon">
+                <a className="links" href='https://amzn.to/4aX00bm' target="_blank"><div  className="amazonCont">
+                    <img className="imgAmazon" src={bascula1} alt="" />
+                    <h3 className="textAmazon">Bveiugn Bveiugn - Báscula digital de baño inteligente con pantalla LED</h3>
+                </div></a>
+                <a className="links" href='https://amzn.to/4c9CzNP' target="_blank"><div className="amazonCont">
+                    <img className="imgAmazon" src={bascula2} alt="" />
+                    <h3 className="textAmazon">Báscula inteligente para peso corporal y porcentaje de grasa, báscula digital con IMC</h3>
+                </div></a>
+                <a className="links" href='https://amzn.to/3VhqmiO' target="_blank"><div  className="amazonCont">
+                    <img className="imgAmazon" src={bascula3} alt="" />
+                    <h3 className="textAmazon">T Electronics - Báscula inteligente para peso corporal con aplicación</h3>
+                </div></a>
             </div>
         </div>
         </>

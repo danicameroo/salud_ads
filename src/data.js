@@ -1,6 +1,6 @@
 import ArtIdTresIMG from './img/ArtIdTres.webp'
 import ArtIdCuatroIMG from './img/ArtIdCuatro.webp'
-import ArtIdCincoIMG from './img/ArtIdCinco.jpg'
+import ArtIdCincoIMG from './img/ArtIdCinco.webp'
 import ArtIdSeisIMG from './img/ArtIdSeis.webp'
 import ArtIdSieteIMG from './img/ArtIdSiete.webp'
 import ArtIdOchoIMG from './img/ArtIdOcho.webp'
@@ -17,98 +17,113 @@ import ArtIdDiecinueveIMG from './img/ArtIdDiecinueve.webp'
 export const gym = [
     {
         img: ArtIdCuatroIMG,
-        id: "Que-ejercicios-hacer-para-perder-grasa",
-        title: "¿Que ejercicios hacer para perder grasa?",
-        cat: "Entrenamiento"
+        id: "ejercicios-para-perder-grasa",
+        title: "¿Que ejercicios hacer para perder grasa corporal?",
+        cat: "Entrenamiento",
+        alt: "Mujer haciendo ejercicio"
     },
     {
         img: ArtIdSeisIMG,
-        id: "Como-evitar-el-estancamiento-en-la-perdida-de-peso",
+        id: "evitar-el-estancamiento-en-perdida-de-peso",
         title: "¿Como evitar el estancamiento en la perdida de peso?",
-        cat: "Entrenamiento"
+        cat: "Entrenamiento",
+        alt: "Mujer haciendo ejercicio"
     },
     {
         img: ArtIdOchoIMG,
-        id: "Por-que-es-importante-el-deporte-en-el-desarrollo-de-los-ninos",
-        title: "¿Por qué  es importante el deporte en el desarrollo de los niños?",
-        cat: "Entrenamiento"
+        id: "importancia-del-deporte-en-los-ninos",
+        title: "Importancia del deporte en el desarrollo de los niños",
+        cat: "Entrenamiento",
+        alt: "niños jugando pelota"
+
     },
     {
         img: ArtIdTresIMG,
         id: "Tips-para-aumentar-masa-muscular",
-        title: "Tips para aumentar masa muscular",
-        cat: "Entrenamiento"
+        title: "6 tips claves para aumentar masa muscular rapidamente",
+        cat: "Entrenamiento",
+        alt: "Hombre levantando pesas"
     }
 ]
 
 export const salud = [
     {
         img: ArtIdSieteIMG,
-        id: "Los-principales-beneficios-de-la-practica-del-yoga",
-        title: "Los principales beneficios de la práctica del yoga",
+        id: "beneficios-del-yoga",
+        title: "Beneficios de la práctica del yoga en tu vida",
         cat: "Bienestar",
-        idn: 1
+        idn: 1,
+        alt: "Mujer haciendo yoga"
     },
     {
         img: ArtIdNueveIMG,
-        id: "Ejercicios-recomendados-y-contraindicados-para-mujeres-embarazadas",
+        id: "ejercicios-para-mujeres-embarazadas",
         title: "Ejercicios recomendados y contraindicados para mujeres embarazadas",
         cat: "Bienestar",
-        idn: 2
+        idn: 2,
+        alt: "Mujer embarazada haciendo ejercicio"
     },
     {
         img: ArtIdDiezIMG,
-        id: "Como-el-ejercicio-fortalece-el-sistema-inmunologico",
-        title: "Cómo el ejercicio fortalece el sistema inmunológico",
+        id: "Actividad-fisica-para-sistema-inmunologico",
+        title: "Actividad física para fortalecer el sistema inmunológico",
         cat: "Bienestar",
-        idn: 3
+        idn: 3,
+        alt: "Mujer haciendo ejercicio"
     }
 ]
 
 export const nutricion = [
     {
         img: ArtIdCatorceIMG,
-        id: "5-ideas-de-desayuno-altas-en-proteina",
-        title: "5 ideas de desayuno altas en proteína",
-        cat: "Nutricion"
+        id: "recetas-desayunos-altos-en-proteina",
+        title: "7 Recetas de desayunos altos en proteína",
+        cat: "Nutricion",
+        alt: "desayuno"
     },
     {
         img: ArtIdQuinceIMG,
-        id: "Alimentos-ricos-en-proteinas",
-        title: "Alimentos ricos en proteínas",
-        cat: "Nutricion"
+        id: "alimentos-altos-en-proteinas",
+        title: "Lista de alimentos altos en proteínas y su importancia",
+        cat: "Nutricion",
+        alt: "almuerzo"
     },
     {
         img: ArtIdDiesiseisIMG,
-        id: "4-ideas-de-postres-saludable",
-        title: "4 ideas de postres saludables",
-        cat: "Nutricion"
+        id: "recetas-de-postres-saludable",
+        title: "5 recetas de postres saludables",
+        cat: "Nutricion",
+        alt: "trufas"
     },
     {
         img: ArtIdTreceIMG,
-        id: "Como-aumentar-la-hemoglobina",
-        title: "¿Cómo aumentar la hemoglobina?",
-        cat: "Nutricion"
+        id: "aumentar-la-hemoglobina",
+        title: "Como aumentar la hemoglobina con la alimentación ",
+        cat: "Nutricion",
+        alt: "desayuno"
     }
 ]
 
 export const inicio = [
     {
         img: ArtIdCincoIMG,
-        id: "Es-bueno-hacer-ejercicio-en-ayunas",
-        title: "¿Es bueno hacer ejercicio en ayunas?",
-        cat: "Entrenamiento"
+        id: "actividad-fisica-en-ayunas",
+        title: "¿Es bueno hacer actividad física en ayunas?",
+        cat: "Entrenamiento",
+        alt: "Mujer haciendo ejercicio"
     },
     {
         img: ArtIdDoceIMG,
-        id: "Cuanta-agua-deberia-beber-cada-dia",
-        title: "¿Cuánta agua debería beber cada día?",
-        cat: "Bienestar"
+        id: "cuanta-agua-beber-cada-dia",
+        title: "¿Cuánta agua debemos beber cada día?",
+        cat: "Bienestar",
+        alt: "Mujer bebiendo agua"
     },
     {
         img: ArtIdDiecinueveIMG,
-        id: "4-ideas-de-almuerzos-altos-en-proteinas",
-        title: "4 ideas de almuerzos altos en proteínas",
-        cat: "Nutricion"
+        id: "recetas-de-almuerzos-altos-en-proteinas",
+        title: "4 recetas de almuerzos altos en proteínas",
+        cat: "Nutricion",
+        alt: "almuerzo"
     }
 ]

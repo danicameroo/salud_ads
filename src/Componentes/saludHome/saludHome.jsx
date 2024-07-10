@@ -1,7 +1,6 @@
 import { Link } from "react-router-dom"
 import { salud } from "../../data"
-import './saludHome.css'
-import './saludHomeMob.css'
+import '../../estilos.css'
 
 const SaludHome = () => {
     return(
@@ -10,15 +9,15 @@ const SaludHome = () => {
             <div className="containerSaludHome">
                 {salud.map((item) => (
                     <div className={item.idn === 2 ? `cont` : item.idn === 1 ? `contTwoEspacio` : `contTwo`}>
-                        <Link className="links" to={`/articulo/${item.id}`}>
-                        <img className={item.idn === 2 ? `imgSaludHomeTwo` : `imgSaludHome`} src={item.img} alt={item.title} />
+                        <a className="links" href={`https://www.fitknow.fit/${item.id}`}>
+                        <img className={item.idn === 2 ? `imgSaludHomeTwo` : `imgSaludHome`} src={item.img} alt={item.alt} />
                         <div className="catContSaludHome"><p className="catTextContSaludHome">{item.cat}</p></div>
                         <p className="textSaludHome">{item.title}</p>
-                        </Link>
+                        </a>
                     </div>
                 ))}
             </div>
-            <Link className="links" to='/categoria/bienestar'><button className="botonSaludHome">Ver mas</button></Link>
+            <button className="botonSaludHome"><a className="linksButtons" href='https://www.fitknow.fit/seccion/bienestar'>Ver mas</a></button>
         </div>
     )
 }

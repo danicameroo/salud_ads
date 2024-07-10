@@ -1,47 +1,54 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { inicio } from "../../data"
-import { Carousel } from 'react-responsive-carousel';
-import 'react-responsive-carousel/lib/styles/carousel.min.css';
-import './Inicio.css'
-import './InicioMob.css'
+import '../../estilos.css'
 import { Link } from "react-router-dom";
 
 const Inicio = () => {
     const [currentSlide, setCurrentSlide] = useState(0);
 
+    useEffect(() => {
+        const containerGymHome = document.querySelector('.inicio');
+        const dots = document.querySelectorAll('.dots');
+
+        const handleScroll = () => {
+            let currentIndex = Math.floor(containerGymHome.scrollLeft / containerGymHome.offsetWidth);
+            setCurrentSlide(currentIndex);
+
+            dots.forEach((dot, index) => {
+                if (index === currentIndex) {
+                    dot.classList.add('active');
+                } else {
+                    dot.classList.remove('active');
+                }
+            });
+        };
+
+        containerGymHome.addEventListener('scroll', handleScroll);
+
+        return () => {
+            containerGymHome.removeEventListener('scroll', handleScroll);
+        };
+    }, []);
+
     return(
         <>
         <div className="inicio">
-            {inicio.map((item) => (
-                <Link className="links" to={`/articulo/${item.id}`}>   
+            {inicio.map((item, index) => (
+                <a className="links" href={`https://www.fitknow.fit/${item.id}`}>   
                 <div className="containerInicio">
-                    <img className="imgInicio" src={item.img} alt={item.title} />
+                    <img className="imgInicio" src={item.img} alt={item.alt} />
                     <div className="containerTextInicio">
                         <div className="catContInicio"><p className="catTextInicio">{item.cat}</p></div>
                         <p className="textInicio">{item.title}</p>
                     </div>
                 </div>
-                </Link>
+                </a>
             ))}
         </div>
-        <div className="InicioMob">
-            <Carousel
-            showThumbs={false}
-            showStatus={false}
-            infiniteLoop
-            selectedItem={currentSlide}
-            onChange={setCurrentSlide}
-            showArrows={false}>
-            {inicio.map((item) => (
-                <Link className="links" to={`/articulo/${item.id}`}><div className="containerInicioMob">    
-                    <img className="imgInicioMob" src={item.img} alt={item.title} />
-                    <div className="containerTextInicioMob">
-                        <div className="catContInicioMob"><p className="catTextInicioMob">{item.cat}</p></div>
-                        <p className="textInicioMob">{item.title}</p>
-                    </div>
-                </div></Link>
+        <div className="containerDots">
+            {inicio.map((_, index) => (
+                <div key={index} className={`dots ${index === currentSlide ? 'active' : ''}`}></div>
             ))}
-            </Carousel>
         </div>
         </>
     )

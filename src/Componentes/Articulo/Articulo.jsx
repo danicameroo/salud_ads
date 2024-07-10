@@ -1,18 +1,20 @@
-import NavbarTwo from "../../Routes/NavbarTwo/NavbaTwo";
 import { datacategories } from "../../datacategories"
 import { useLocation } from "react-router-dom";
 import ArticuloTexto from "../ArticuloTexto/ArticuloTexto";
-import './Articulo.css'
-import './ArticuloMob.css'
-import { useEffect, useState } from "react";
+import '../../estilos.css'
+import React, { useEffect, useState } from "react";
 import { Helmet } from 'react-helmet';
+import NavbarTwoLap from "../../Routes/NavbarTwo/NavbarTwoLap/NavbarTwoLap";
+import NavbarTwoMob from "../../Routes/NavbarTwo/NavbarTwoMob/NavbarTwoMob";
+import { useMediaQuery } from "react-responsive";
 
-const Articulo = () => {
+const Articulo = React.memo(() => {
     const [filteredCategories, setFilteredCategories] = useState([]);
+    const isMobile = useMediaQuery({ maxWidth: 700 });
     const location = useLocation()
-    const id = (location.pathname.split("/")[2])
+    const id = (location.pathname.split("/")[1])
 
-   
+    console.log(id)
   
     useEffect(() => {
         const filterCategories = () => {
@@ -20,27 +22,29 @@ const Articulo = () => {
             setFilteredCategories(filteredCategories.length > 0 ? filteredCategories : datacategories);
         };
         filterCategories();
-    });
+    }, [id]);
 
     return(
         <>
-        <NavbarTwo />
+        {isMobile ? <NavbarTwoMob />: <NavbarTwoLap />}
         {filteredCategories.map((item) => (
-            <div>
+            <div key={item.id}>
                 <Helmet>
-                    <meta name="description" content={item.title} />
+                    <title>{item.titleSEO}</title>
+                    <meta name="description" content={item.content} />
+                    <link rel="canonical" href={`https://www.fitknow.fit/${item.id}`} />
                 </Helmet>
                 <div  className="titleContArt">
                     <div className="containerTitleArt">
                         <h1 className="titleArt">{item.title}</h1>
                     </div>
-                    <img className="imgArt" src={item.img} alt={item.title} />
+                    <img className="imgArt" src={item.img} alt={item.alt} />
                 </div>
                 <ArticuloTexto item={item}/>
             </div>
         ))}   
         </>
     )
-}
+})
 
 export default Articulo
