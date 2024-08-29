@@ -14,6 +14,7 @@ const NavbarLap = () => {
                         <li className='textListNav'><Link className='linksNav' to='/seccion/entrenamiento'>Entrenamiento</Link></li>
                         <li className='textListNav'><Link className='linksNav' to='/seccion/bienestar'>Bienestar</Link></li>
                         <li className='textListNav'><Link className='linksNav' to='/seccion/nutricion'>Nutrición</Link></li>
+                        <li className='textListNav'><Link className='linksNav' to='/seccion/recetas'>Recetas</Link></li>
                        <li className='textListNav'><Link className='linksNav' to='/calculadoraIMC'>Calculadora IMC</Link></li>
                     </ul>
                 </div>

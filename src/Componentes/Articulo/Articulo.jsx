@@ -38,7 +38,7 @@ const Articulo = React.memo(() => {
                     <div className="containerTitleArt">
                         <h1 className="titleArt">{item.title}</h1>
                     </div>
-                    <img className="imgArt" src={item.img} alt={item.alt} />
+                    <img className="imgArt" src={item.img} alt={item.alt} loading="lazy" />
                 </div>
                 <ArticuloTexto item={item}/>
             </div>

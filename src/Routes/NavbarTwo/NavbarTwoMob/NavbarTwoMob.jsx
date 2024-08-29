@@ -26,6 +26,7 @@ const NavbarTwoMob = () =>{
                         <Link className='links' to="/seccion/entrenamiento"><li onClick={() => setMenu(false)} className='textListNav'>Entrenamiento</li></Link>
                         <Link className='links' to="/seccion/bienestar"><li onClick={() => setMenu(false)} className='textListNav'>Bienestar</li></Link>
                         <Link className='links' to="/seccion/nutricion"><li onClick={() => setMenu(false)} className='textListNav'>Nutrición</li></Link>
+                        <Link className='links' to="/seccion/recetas"><li onClick={() => setMenu(false)} className='textListNav'>Recetas</li></Link>
                         <Link className='links' to="/calculadoraIMC"><li onClick={() => setMenu(false)} className='textListNav'>Calculadora IMC</li></Link>
                     </ul>
                 </div> : <></>

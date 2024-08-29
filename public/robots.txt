@@ -1,4 +1,5 @@
 User-agent: *
 Disallow: 
 
-Sitemap: https://www.fitknow.fit/mysitemap.xml
+Sitemap: https://www.fitknow.fit/sitemap.xml
+

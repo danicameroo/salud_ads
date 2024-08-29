@@ -60,6 +60,10 @@ const Categorias = () => {
             setCategorie('Nutrición')
             setFiltro(['Altos en proteínas', 'Salud', 'Baja en calorias'])
             setDesc('Descubre una alimentación nutritiva y balanceada con recetas saludables, guías sobre macronutrientes y micronutrientes, y consejos para una dieta equilibrada. ¡Todo lo que necesitas para mejorar tu salud a través de una nutrición adecuada!')
+        }else if(cat === 'recetas'){
+            setCategorie('Recetas')
+            setFiltro(['Desayuno', 'Almuerzo', 'Postres'])
+            setDesc('')
         }
     }, [cat])
     
@@ -67,7 +71,7 @@ const Categorias = () => {
     return(
         <>
             <Helmet>
-                <title>{categorie} | Fitknow</title>
+                <title>{categorie} | T Fitknow</title>
                 <meta name="description" content={desc} />
                 <link rel="canonical" href={`https://www.fitknow.fit/`} />    
             </Helmet>
@@ -84,9 +88,9 @@ const Categorias = () => {
                         </div>
                         {isOpen && 
                             <ul className="contOpCat">
-                                {filtro.map((op) => (
+                                {filtro.map((op, index) => (
                                     <>
-                                    <li onClick={() => handleClick(op)} value={op} className="optionCatTwo">{op}</li>
+                                    <li key={index} onClick={() => handleClick(op)} value={op} className="optionCatTwo">{op}</li>
                                     <span className="line"></span>
                                     </>
                                 ))}
@@ -95,10 +99,10 @@ const Categorias = () => {
                     </div>
                 </div>
                 <div className="containerDosCat">
-                {subcat.map((info) => (
-                    <Link to={`/${info.id}`} className="links">
+                {subcat.map((info, index) => (
+                    <Link key={index} to={`/${info.id}`} className="links">
                     <div className="contInfoCat">
-                        <img className="imgCatInfo" src={info.img} alt={info.alt} />
+                        <img className="imgCatInfo" src={info.img} alt={info.alt} loading="lazy" />
                         <div className="contTextInfoCat">
                             <div className="contSubCat"><p className="textSubCat">{categorie}</p></div>
                             <p className="textInfoCat">{info.title}</p>

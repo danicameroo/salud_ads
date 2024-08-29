@@ -15,6 +15,7 @@ const NavbarTwoLap = () =>{
                     <Link className='links' to="/seccion/entrenamiento"><li className='textListNavTwo'>Entrenamiento</li></Link>
                     <Link className='links' to="/seccion/bienestar"><li className='textListNavTwo'>Bienestar</li></Link>
                     <Link className='links' to="/seccion/nutricion"><li className='textListNavTwo'>Nutrición</li></Link>
+                    <Link className='links' to="/seccion/recetas"><li className='textListNavTwo'>Recetas</li></Link>
                     <Link className='links' to="/calculadoraIMC"><li className='textListNavTwo'>Calculadora IMC</li></Link>        
                 </ul>
             </div>

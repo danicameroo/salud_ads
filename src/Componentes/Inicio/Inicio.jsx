@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import { inicio } from "../../data"
 import '../../estilos.css'
-import { Link } from "react-router-dom";
 
 const Inicio = () => {
     const [currentSlide, setCurrentSlide] = useState(0);
@@ -35,7 +34,7 @@ const Inicio = () => {
         <div className="inicio">
             {inicio.map((item, index) => (
                 <a className="links" href={`https://www.fitknow.fit/${item.id}`}>   
-                <div className="containerInicio">
+                <div key={index} className="containerInicio">
                     <img className="imgInicio" src={item.img} alt={item.alt} />
                     <div className="containerTextInicio">
                         <div className="catContInicio"><p className="catTextInicio">{item.cat}</p></div>

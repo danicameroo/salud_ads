@@ -2,7 +2,6 @@ import { useEffect, useState } from "react";
 import { nutricion } from "../../data"
 import receta0 from '../../img/receta0.webp'
 import '../../estilos.css'
-import { Link } from "react-router-dom";
 
 const NutricionHome = () => {
     const [currentSlide, setCurrentSlide] = useState(0);
@@ -34,7 +33,7 @@ const NutricionHome = () => {
     return(
         <div className="NutricionHome">
             <div className="containerUnoNutricionHome">
-                <img className="imgNutricionHome" src={receta0} alt="Alimentación nutritiva y balanceada con recetas saludables y guías nutriciconales" />
+                <img className="imgNutricionHome" src={receta0} alt="Alimentación nutritiva y balanceada con recetas saludables y guías nutriciconales" loading="lazy" />
                 <div className="contUnoNutricionHome">
                     <h2 className="titleNutricionHome">NUTRICION</h2>
                     <p className="textNutricionHome">Una vida saludable y equilibrada se sustenta en una alimentación nutritiva, una hidratación adecuada, el descanso necesario y el entrenamiento regular. Al integrar estos pilares se sientan las bases para disfrutar de una existencia plena y llena de vitalidad.</p>
@@ -42,10 +41,10 @@ const NutricionHome = () => {
                 </div>
             </div>
             <div className="containerDosNutricionHome">
-                {nutricion.map((item) => (
-                    <div className="contDosNutricionHome">
+                {nutricion.map((item, index) => (
+                    <div key={index} className="contDosNutricionHome">
                     <a className="links" href={`https://www.fitknow.fit/${item.id}`}>
-                        <img className="imgMapNutricionHome" src={item.img} alt={item.alt} />
+                        <img className="imgMapNutricionHome" src={item.img} alt={item.alt} loading="lazy" />
                         <p className="textMapNutricionHome">{item.title}</p>
                     </a>
                     </div>

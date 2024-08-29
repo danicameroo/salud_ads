@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
 import { gym } from "../../data"
 import '../../estilos.css'
-import { Link } from "react-router-dom";
 
 const GymHome = () => {
     const [currentSlide, setCurrentSlide] = useState(0);
@@ -34,9 +33,9 @@ const GymHome = () => {
         <>
             <div className="containerGymHome">
                 {gym.map((item, index) => (
-                    <a className="links" href={`https://www.fitknow.fit/${item.id}`}>
+                    <a key={index} className="links" href={`https://www.fitknow.fit/${item.id}`}>
                         <div className="mapContGymHome">
-                            <img className="imgGymHome" src={item.img} alt={item.alt} />
+                            <img className="imgGymHome" src={item.img} alt={item.alt} loading="lazy" />
                             <div className="catContGymHome"><p className="catTextGymHome">{item.cat}</p></div>
                             <p className="textContGymHome">{item.title}</p>
                         </div>

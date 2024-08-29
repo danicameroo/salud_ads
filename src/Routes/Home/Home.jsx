@@ -3,7 +3,6 @@ import GymHome from "../../Componentes/gymHome/gymHome"
 import SaludHome from "../../Componentes/saludHome/saludHome"
 import NutricionHome from "../../Componentes/nutricionHome/nutricionHome"
 import { Helmet } from "react-helmet"
-import { Link } from "react-router-dom"
 import { useMediaQuery } from 'react-responsive';
 import NavbarMob from "../Navbar/NabvarMob/NavbarMob"
 import NavbarLap from "../Navbar/NavbarLap/Navbar"
@@ -16,6 +15,8 @@ const Home = () => {
             <Helmet>
                 <title>FitKnow - Todo sobre tu salud</title>
                 <meta name="description" content='Descubre los secretos de una vida saludable: Aprende a equilibrar cuerpo y mente para mejorar tu bienestar general.' />
+                <link rel="canonical" href={`https://www.fitknow.fit/`} />
+
             </Helmet>
             {isMobile ? <NavbarMob /> : <NavbarLap />}
             <Inicio />

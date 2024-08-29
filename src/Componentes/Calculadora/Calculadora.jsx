@@ -1,8 +1,8 @@
-import { useEffect, useState } from "react"
+import { useState } from "react"
 import { Helmet } from "react-helmet"
-import bascula1 from '../../img/bascula1.jpg'
+import bascula1 from '../../img/bascula1.webp'
 import bascula2 from '../../img/bascula2.webp'
-import bascula3 from '../../img/bascula3.jpg'
+import bascula3 from '../../img/bascula3.webp'
 import NavbarTwoLap from "../../Routes/NavbarTwo/NavbarTwoLap/NavbarTwoLap"
 import NavbarTwoMob from "../../Routes/NavbarTwo/NavbarTwoMob/NavbarTwoMob"
 import { useMediaQuery } from "react-responsive"
@@ -158,16 +158,16 @@ const Calculadora = () => {
             <p className="textArt" style={{ textIndent: '2em', textAlign: 'center'}}>Además, la integración de la calculadora de IMC en la báscula permite una evaluación más completa del estado de salud. Al contar con ambas métricas (peso y IMC) a la mano, las personas pueden obtener una imagen más clara y detallada de su composición corporal, lo que les brinda una valiosa retroalimentación para tomar decisiones informadas sobre sus objetivos de salud y bienestar.</p>
             <p className="textArt" style={{ textIndent: '2em', textAlign: 'center'}}>Por otra parte, la conveniencia de tener una sola unidad que combine la báscula y la calculadora de IMC representa una ventaja práctica notable. En lugar de tener que utilizar dos dispositivos por separado, los usuarios pueden simplificar su rutina de seguimiento y monitoreo, ahorrando tiempo y esfuerzo. Esto resulta especialmente útil en entornos como hogares, consultorios médicos o centros de fitness, donde la accesibilidad y la facilidad de uso son factores clave.</p>
             <div className="containerAmazon">
-                <a className="links" href='https://amzn.to/4aX00bm' target="_blank"><div  className="amazonCont">
-                    <img className="imgAmazon" src={bascula1} alt="" />
+                <a className="links" href='https://amzn.to/4aX00bm' target="_blank" rel="noreferrer"><div  className="amazonCont">
+                    <img className="imgAmazon" src={bascula1} alt="" loading="lazy" />
                     <h3 className="textAmazon">Bveiugn Bveiugn - Báscula digital de baño inteligente con pantalla LED</h3>
                 </div></a>
-                <a className="links" href='https://amzn.to/4c9CzNP' target="_blank"><div className="amazonCont">
-                    <img className="imgAmazon" src={bascula2} alt="" />
+                <a className="links" href='https://amzn.to/4c9CzNP' target="_blank" rel="noreferrer"><div className="amazonCont">
+                    <img className="imgAmazon" src={bascula2} alt="" loading="lazy" />
                     <h3 className="textAmazon">Báscula inteligente para peso corporal y porcentaje de grasa, báscula digital con IMC</h3>
                 </div></a>
-                <a className="links" href='https://amzn.to/3VhqmiO' target="_blank"><div  className="amazonCont">
-                    <img className="imgAmazon" src={bascula3} alt="" />
+                <a className="links" href='https://amzn.to/3VhqmiO' target="_blank" rel="noreferrer"><div  className="amazonCont">
+                    <img className="imgAmazon" src={bascula3} alt="" loading="lazy" />
                     <h3 className="textAmazon">T Electronics - Báscula inteligente para peso corporal con aplicación</h3>
                 </div></a>
             </div>

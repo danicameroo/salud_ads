@@ -25,6 +25,9 @@ import ArtIdDiesiseisIMG from './img/ArtIdDiesiseis.webp'
 import ArtIdDiecisieteIMG from './img/ArtIdDiecisiete.webp'
 import ArtIdDieciochoIMG from './img/ArtIdDieciocho.webp'
 import ArtIdDiecinueveIMG from './img/ArtIdDiecinueve.webp'
+import ArtIdVeinteIMG from './img/ArtIdVeinte.webp'
+import ArtIdVeintiunoIMG from './img/ArtIdVeintiuno.webp'
+import ArtIdVeintidosIMG from './img/ArtIdVeintidos.webp'
 import ArtIdCinco from "./Componentes/artId/ArtIdCinco";
 import ArtIdSeisUno from "./Componentes/artId/ArtIdSeis/ArtIdSeisUno";
 import ArtIdNueveUno from "./Componentes/artId/ArtIdNueve/ArtIdNueveUno";
@@ -36,6 +39,9 @@ import ArtIdSiete from "./Componentes/artId/ArtIdSiete";
 import ArtIdOcho from "./Componentes/artId/ArtIdOcho";
 import ArtIdOnce from "./Componentes/artId/ArtIdOnce";
 import ArtIdDiecisiete from "./Componentes/artId/ArtIdDiecisiete";
+import ArtIdVeinte from "./Componentes/artId/ArtIdVeinte";
+import ArtIdVeintiuno from "./Componentes/artId/ArtIdVeintiuno";
+import ArtIdVeintidos from "./Componentes/artId/ArtIdVeintidos";
 
 export const datacategories = [
 //GYM
@@ -217,8 +223,8 @@ export const datacategories = [
         img: ArtIdCatorceIMG,
         title: "7 Recetas de desayunos altos en proteína",
         titleSEO: "7 RECETAS de DESAYUNOS Altos en PROTEÍNAS [+30g de PROTEÍNA] | FitKnow",
-        categorie: ["Nutricion"],
-        subcategorie: ["Altos en proteínas"],
+        categorie: ["Nutricion", "Recetas"],
+        subcategorie: ["Altos en proteínas", "Desayuno"],
         content: "Disfruta de 7 recetas altas en proteína para tu desayuno de mas de 30g de proteína, desde huevos y espinacas hasta croquetas keto de jamón. ¡Comienza tu día cargado de energía!",
         articulo: [ <ArtIdCatorceUno /> ]
     },
@@ -243,8 +249,8 @@ export const datacategories = [
         img: ArtIdDiesiseisIMG,
         title: "5 recetas de postres saludables",
         titleSEO: "5 RECETAS de POSTRES SALUDABLES [FÁCIL Y RÁPIDO] | FitKnow",
-        categorie: ["Nutricion"],
-        subcategorie: ["Baja en calorias"],
+        categorie: ["Nutricion", "Recetas"],
+        subcategorie: ["Baja en calorias", "Postres"],
         content: "5 recetas de postres saludables con ingredientes naturales y bajos en azúcar y grasa, para disfrutar de los sabores tradicionales sin comprometer la salud.",
         articulo: [ <ArtIdDiesiseisUno /> ]
     },
@@ -282,9 +288,48 @@ export const datacategories = [
         img: ArtIdDiecinueveIMG,
         title: "4 recetas de almuerzos altos en proteínas",
         titleSEO: "4 RECETAS de Almuerzos Altos en PROTEÍNAS [hasta 75g PROTEÍNA]| FitKnow",
-        categorie: ["Nutricion"],
-        subcategorie: ["Altos en proteínas"],
+        categorie: ["Nutricion", "Recetas"],
+        subcategorie: ["Altos en proteínas", "Almuerzo"],
         content: "Recetas de almuerzos ricos en proteínas: opciones deliciosas y nutritivas para mejorar el rendimiento y mantener un estilo de vida saludable.",
         articulo: [<ArtIdDiecinueveUno />]
+    },
+    //receta-de-almuerzo-para-bajar-de-peso
+    {
+        artID: 20,
+        alt: "almuerzo",
+        id: "receta-de-almuerzo-para-bajar-de-peso",
+        img: ArtIdVeinteIMG,
+        title: "Almuerzo para bajar de peso: Ensalada de Quinoa y Verduras Asadas",
+        titleSEO: "Receta de almuerzo: Una Opción Saludable para Bajar de Peso | FitKnow",
+        categorie: ["Nutricion", "Recetas"],
+        subcategorie: ["Baja en calorias", "Almuerzo"],
+        content: "Deliciosa ensalada de quinoa y verduras asadas es perfecta para un almuerzo ligero y nutritivo. Rica en proteínas y fibra",
+        articulo: [<ArtIdVeinte />]
+    },
+    //receta-de-desayuno-saludables-y-rapidas
+    {
+        artID: 22,
+        alt: "desayuno",
+        id: "receta-de-desayuno-saludables-y-rapidas",
+        img: ArtIdVeintiunoIMG,
+        title: "5 Recetas de Desayuno Saludables y Rápidas ¡Listas en 5 Minutos!",
+        titleSEO: "Recetas de Desayuno ¡Listas en 5 Minutos! | FitKnow",
+        categorie: ["Nutricion", "Recetas"],
+        subcategorie: ["Salud", "Desayuno"],
+        content: "Recetas de desayunos saludables y rapidos de preparar: opciones deliciosas y nutritivas para mantener un estilo de vida saludable sin perder mucho tiempo.",
+        articulo: [<ArtIdVeintiuno />]
+    },
+    //receta-de-postres-alto-en-proteina
+    {
+        artID: 22,
+        alt: "desayuno",
+        id: "receta-de-postres-alto-en-proteina",
+        img: ArtIdVeintidosIMG,
+        title: "Las Mejores Recetas de Postres Altos en Proteínas: ¡Deliciosos y Nutritivos Bocados para Tu Bienestar!",
+        titleSEO: "Las Mejores Recetas de Postres Altos en Proteínas | FitKnow",
+        categorie: ["Nutricion", "Recetas"],
+        subcategorie: ["Altos en proteínas", "Postres"],
+        content: "Las Mejores Recetas de Postres Altos en Proteínas: Deliciosos y Nutritivos para Tu Bienestar. Faciles de hacer para merendar en la comodidad de tu hogar sin romper la dieta",
+        articulo: [<ArtIdVeintidos />]
     },
 ]
